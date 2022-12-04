@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "bot-parsing-wildberries"
+version = "0.1.0"
+description = ""
+authors = ["Alexander Butakov <asbutakov@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bot_parsing_wildberries"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aiogram = {url = "https://github.com/aiogram/aiogram/archive/refs/heads/dev-3.x.zip"}
+requests = "^2.28.1"
+python-dotenv = "^0.21.0"
+
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.0.0"
+isort = "^5.10.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
