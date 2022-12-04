@@ -36,10 +36,13 @@ def parse_wildberries(vendor_code: int, item_name: str):
             for pos in range(len(json_response['data']['products'])):
                 if (json_response['data']['products'][pos]['id']
                         == vendor_code):
-                    result.append('Страница <{}>, позиция <{}>'.format(page, pos))
+                    result.append('Страница <{}>, позиция <{}>'
+                                  .format(page, pos))
     if result:
-        return ('Результат поиска товара <{}> с артиклем <{}>'.format(item_name, vendor_code) +
+        return ('Результат поиска товара <{}> с артиклем <{}>'
+                .format(item_name, vendor_code) +
                 '\n' +
                 '\n'.join(result))
     else:
-        return 'Товар <{}> с артиклем <{}> не найден'.format(item_name, vendor_code)
+        return 'Товар <{}> с артиклем <{}> не найден'\
+            .format(item_name, vendor_code)

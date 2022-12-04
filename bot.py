@@ -1,15 +1,13 @@
-import aiogram.exceptions
 import asyncio
 import os
 
-from dotenv import load_dotenv
+import aiogram.exceptions
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
+from dotenv import load_dotenv
 
+from bot_utils import check_input, parse_wildberries
 from logger import logger
-
-from bot_utils import parse_wildberries, check_input
-
 
 load_dotenv()
 TG_TOKEN = os.getenv('TG_TOKEN')
